@@ -1,0 +1,9 @@
+#下载的依赖
+pip install flask
+pip install flask flask-cors
+
+
+
+#执行步骤，在文件夹输入cmd启动
+python server.py
+python -m http.server 8000

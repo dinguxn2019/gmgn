@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOL钱包数据查询</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>SOL钱包数据查询</h1>
+        <div class="contract-section">
+            <label for="contract-address">输入Sol合约CA：</label>
+            <input type="text" id="contract-address" placeholder="输入Sol合约CA">
+            <label for="address-count">输入提取地址数量：</label>
+            <input type="number" id="address-count" placeholder="数量" min="1" max="100">
+            <button class="fetch-top-holders">提取持有者</button>
+        </div>
+        <div class="output-section">
+            <div class="output-header">
+                <h2>Top 持有者信息</h2>
+                
+            </div>
+            <div class="addresses-container">
+                <table class="addresses-table">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>钱包地址</th>
+                        </tr>
+                    </thead>
+                    <tbody id="addressesList">
+                        <!-- 地址将通过JavaScript动态添加 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button class="copy-all-btn" title="复制所有地址">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+            一键复制所有钱包地址
+        </button>
+        <div class="input-section">
+            <label for="wallet-addresses">输入钱包地址（每行一个）：</label>
+            <textarea id="wallet-addresses" rows="4"></textarea>
+            <div class="buttons">
+                <button class="start-query">开始查询</button>
+                <button class="clear-results">清除结果</button>
+            </div>
+        </div>
+        <div class="output-section-u">
+            <h2>钱包分析结果</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>钱包地址</th>
+                        <th>胜率</th>
+                        <th>7D交易数</th>
+                        <th>最近7D盈亏</th>
+                        <th>SOL余额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="export">
+            <button id="download-csv" disabled>下载分析结果CSV文件</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
